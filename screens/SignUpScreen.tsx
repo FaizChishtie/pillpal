@@ -163,6 +163,7 @@ class SignUpScreen extends React.Component<Props, State> {
                         onSubmitEditing={this.handlePasswordSubmitPress}
                         placeholder={'Password'}
                         secureTextEntry={true}
+                        blurOnSubmit={false}
                         returnKeyType="next"
                         onBlur={this.handlePasswordBlur}
                         error={passwordError}
@@ -173,7 +174,9 @@ class SignUpScreen extends React.Component<Props, State> {
                         onChangeText={this.handleConfirmPasswordChange}
                         placeholder={'Confirm Password'}
                         secureTextEntry={true}
+                        blurOnSubmit={false}
                         returnKeyType="done"
+                        onSubmitEditing={()=> Keyboard.dismiss()}
                         onBlur={this.handleConfirmPasswordBlur}
                         error={confirmPasswordError}
                     />

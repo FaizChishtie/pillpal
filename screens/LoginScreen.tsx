@@ -133,6 +133,8 @@ class LoginScreen extends React.Component<Props, State> {
                         secureTextEntry={true}
                         returnKeyType="done"
                         onBlur={this.handlePasswordBlur}
+                        onSubmitEditing={()=> Keyboard.dismiss()}
+                        blurOnSubmit={false}
                         error={passwordError}
                     />
                 <Text style={styles.small}>Don't have an account yet?{' '} 
