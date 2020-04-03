@@ -5,23 +5,34 @@ import Button from './Button';
 
 type Props = {
     name: string,
-    date: string
+    date: string,
+    renderHello: boolean
 };
 
 class TopProfile extends React.Component<Props> {
+
+    renderHello = () => {
+        if (this.props.renderHello) {
+            return (
+            <View>
+                <Text style={styles.splashtext}>Hello!</Text>
+                <Text style={[styles.small, {color: 'gray', paddingBottom: 10}]}> {this.props.date} </Text>
+                <View
+                    style={{
+                        borderBottomColor: 'grey',
+                        borderBottomWidth: 0.5,
+                    }}/>
+            </View>    
+            )
+        }
+    }
+
     render() {
         return (
             <View style={styles.container}>
                 <View style={{width: '90%'}}>
                     <AvatarAndName name={this.props.name}/>
-                    <Text style={styles.splashtext}>Hello!</Text>
-                    <Text style={[styles.small, {color: 'gray', paddingBottom: 10}]}> {this.props.date} </Text>
-                    <View
-                        style={{
-                            borderBottomColor: 'grey',
-                            borderBottomWidth: 0.5,
-                        }}
-                    />
+                    {this.renderHello()}
                 </View>
             </View>
         )

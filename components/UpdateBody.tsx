@@ -11,11 +11,7 @@ interface Props extends NavigationInjectedProps {
     date: string,
 };
 
-class HomeBody extends React.Component<Props> {
-
-    handleAddCarePartnerPressed = () => {
-        this.props.navigation.navigate('AddCare', {});
-    }
+class UpdateBody extends React.Component<Props> {
 
     handleAddMedicationPressed = () => {
         this.props.navigation.navigate('AddMed', {});
@@ -27,17 +23,12 @@ class HomeBody extends React.Component<Props> {
         } else {
             return (
                 <View>
-                    <Text style={styles.splashtext}>Let's get started{'\n'}</Text>
+                    <Text style={styles.splashtext}>Nothing to show yet!{'\n'}</Text>
                     <View style={styles.form}>
-                        <Text style={[styles.small, {textAlign: 'center'}]}> Add drugs to begin tracking intake or add a care partner get your community involved.{'\n'}</Text>
+                        <Text style={[styles.small, {textAlign: 'center'}]}> Once you begin tracking drugs, we’ll update here with milestones.{'\n'}</Text>
                         <Button 
                         label={'ADD A PILL'} 
                         onPress={this.handleAddMedicationPressed}
-                        />
-                        <Text style={[styles.small, {color: 'gray', paddingBottom: 10}]}> OR </Text>
-                        <Button 
-                        label={'ADD A CARE PARTNER'} 
-                        onPress={this.handleAddCarePartnerPressed}
                         />
                     </View>
                 </View>
@@ -49,7 +40,7 @@ class HomeBody extends React.Component<Props> {
         return (
             <View style={styles.container}>
                 <View style={styles.top}>
-                    <TopProfile name={this.props.name} date={this.props.date} renderHello={true}/>
+                    <TopProfile name={this.props.name} date={this.props.date} renderHello={false}/>
                 </View>
                 {this.hasMedication()}
             </View>
@@ -70,7 +61,7 @@ const styles = StyleSheet.create({
         color: 'black',
         fontSize: 25,
         fontWeight: "bold",
-        marginTop:50,
+        marginTop:225,
         textAlign: 'center'
     },
     login: {
@@ -93,4 +84,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default withNavigation(HomeBody);
+export default withNavigation(UpdateBody);

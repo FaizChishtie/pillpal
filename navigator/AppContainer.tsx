@@ -12,6 +12,8 @@ import ProfileSetupScreen from '../screens/ProfileSetupScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import UpdateScreen from '../screens/UpdateScreen';
 import LogInLoadingScreen from '../screens/LogInLoadingScreen';
+import AddCarePartnerScreen from '../screens/AddACarePartnerScreen';
+import AddAPillScreen from '../screens/AddAPillScreen';
 
 const AuthStack = createStackNavigator({
     LogIn: {screen: LoginScreen},
@@ -62,8 +64,9 @@ const AppNavigator = createSwitchNavigator(
 {
         App: HomeTabNavigator,
         Auth: AuthStack,
-        LogInLoading: LogInLoadingScreen
-
+        LogInLoading: LogInLoadingScreen,
+        AddCare: {screen: AddCarePartnerScreen},
+        AddMed: {screen: AddAPillScreen},
 }, {
     defaultNavigationOptions: {
     header: null,

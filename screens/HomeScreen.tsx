@@ -21,42 +21,4 @@ class HomeScreen extends React.Component<Props>{
         }
 }
 
-const styles = StyleSheet.create({
-  container: {
-      flex: 1,
-      backgroundColor: 'white',
-      alignItems: 'center',
-      justifyContent: 'space-between'
-  },
-  logo: {
-      flex: 1,
-      width: '20%',
-      resizeMode: 'contain',
-      alignSelf: 'center',
-  },
-  form: {
-      flex: 1,
-      justifyContent: 'center',
-      width: '80%'
-  },
-  splashtext: {
-      color: 'black',
-      fontSize: 25,
-      fontWeight: "bold",
-      marginTop:200,
-  },
-  login: {
-      color: 'black',
-      fontSize: 20,
-      fontWeight: "bold",
-      marginBottom:2,
-  },
-  small: {
-      color: '#66afe7',
-      fontSize: 14,
-      marginBottom: 2,
-      textAlign:'center',
-  }
-});
-
 export default HomeScreen;

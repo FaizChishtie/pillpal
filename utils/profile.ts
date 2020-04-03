@@ -7,5 +7,6 @@ export default class User {
         middle: 'M.',
     };
     prescriptions = [];
+    carePartners = [];
     hasMedication = !(this.prescriptions.length === 0);
 }
