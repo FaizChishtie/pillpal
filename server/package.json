@@ -1,31 +1,28 @@
 {
-	"name": "server",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node index.js"
-	},
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"babel-polyfill": "^6.26.0",
-		"babel-preset-es2015": "^6.24.1",
-		"babel-preset-stage-0": "^6.24.1",
-		"babel-register": "^6.26.0",
-		"bcrypt": "^5.0.0",
-		"body-parser": "^1.18.3",
-		"express": "^4.16.3",
-		"jsonwebtoken": "^8.3.0",
-		"mongoose": "^5.2.8",
-		"react-navigation-redux-helpers": "^2.0.5"
-	},
-	"devDependencies": {
-		"nodemon": "^1.18.3"
-	},
-	"engines": {
-		"node": "8.11.2",
-		"npm": "6.1.0"
-	}
+  "name": "pillpal-server",
+  "version": "1.0.0",
+  "description": "RESTful API with CRUD functionality",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FaizChishtie/pillpal.git"
+  },
+  "keywords": [
+    "pillpal"
+  ],
+  "author": "Faizaan Chishtie <faizchishtie@gmail.com> (https://github.com/FaizChishtie)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FaizChishtie/pillpal/issues"
+  },
+  "homepage": "https://github.com/FaizChishtie/pillpal#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.15"
+  }
 }
